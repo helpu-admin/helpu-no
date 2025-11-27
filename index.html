@@ -11,7 +11,7 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <div class="logo">Your Logo</div>
+      <div class="logo"><img class="logo-mark" src="assets/img/helpu_logo_main.svg" alt="Helpu Logo" /></div>
       <nav class="nav">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
@@ -26,11 +26,12 @@
     <section id="home" class="hero">
       <div class="container hero-content">
         <div>
-          <h1>Headline that clearly says what you offer</h1>
+          <h1>Et rent hjem – uten ekstra stress</h1>
           <p>
-            One or two sentences explaining who you help and how you help them.
+            HelpU hjelper travle familier med pålitelige tjenester i hjemmet. Vi legger vekt på kvalitet, forutsigbarhet og god kommunikasjon.<br> <br>✨ Fast og regelmessig service
+<br>🏠 Spesialisert på private hjem
           </p>
-          <a href="#contact" class="btn-primary">Get in touch</a>
+          <a href="#contact" class="btn-primary">Bestill uforpliktende tilbud</a>
         </div>
       </div>
     </section>
@@ -59,10 +60,15 @@
     <!-- ABOUT SECTION -->
     <section id="about" class="section section-alt">
       <div class="container">
-        <h2>About</h2>
+        <h2>Om HelpU</h2>
         <p>
-          A short story about your business, your background, and why people should trust you.
+          HelpU er et lite og personlig tjenestefirma som brenner for enkle, stabile avtaler og god dialog med kundene.<br>
         </p>
+        <ul class="checkpoints">
+          <li>Hjemmetjenester i Oslo – særlig Nordstrand og omegn</li>
+          <li>Erfaring fra koordinering og drift av profesjonell trappevask</li>
+          <li>Forutsigbare avtaler og ryddig kommunikasjon</li>
+        </ul>
       </div>
     </section>
 
@@ -70,7 +76,7 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-        <form class="contact-form">
+        <form class="contact-form" name="contact" method="POST" netlify>
           <div class="form-row">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" required />
