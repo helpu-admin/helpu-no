@@ -1,673 +1,100 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HelpU – Tjenester for hjem og hverdag i Oslo</title>
-  <meta name="description" content="HelpU tilbyr fleksibel og pålitelig hjemmerengjøring i Oslo. Fast vask, hovedrengjøring og skreddersydde løsninger for travle hjem." />
-  <style>
-    :root {
-      --green: #18a26d;
-      --green-soft: #e7f7f0;
-      --dark: #1f2933;
-      --light: #ffffff;
-      --gray: #6b7280;
-      --border-radius: 14px;
-      --shadow-soft: 0 10px 30px rgba(15, 118, 110, 0.12);
-    }
+  <title>Your Business Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Short description of what your business does." />
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .logo-icon {
-      height: 96px;
-      width: auto;
-      display: block;
-    }
-
-    .shield-logo {
-      height: 40px;
-      width: auto;
-    }
-    
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      color: var(--dark);
-      line-height: 1.6;
-      background: #f3f4f6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    header {
-      background: radial-gradient(circle at top left, #6ee7b7, #059669);
-      color: var(--light);
-      padding: 16px 20px 26px;
-    }
-
-    
-    .nav {
-      max-width: 1000px;
-      margin: 0 auto 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.16);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      font-size: 0.9rem;
-      opacity: 0.95;
-    }
-
-    .nav-links a {
-      padding: 4px 10px;
-      border-radius: 999px;
-      transition: background 0.2s ease, transform 0.1s ease;
-    }
-
-    .nav-links a:hover {
-      background: rgba(255, 255, 255, 0.16);
-      transform: translateY(-1px);
-    }
-
-    .hero {
-      max-width: 1000px;
-      margin: 16px auto 0;
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 26px;
-      align-items: center;
-    }
-
-    .hero-text h1 {
-      font-size: clamp(2.1rem, 3vw + 1rem, 2.9rem);
-      margin-bottom: 10px;
-    }
-
-    .hero-text h1 span {
-      color: #bbf7d0;
-    }
-
-    .hero-text p {
-      max-width: 520px;
-      opacity: 0.96;
-      font-size: 0.98rem;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 14px 0 6px;
-      font-size: 0.8rem;
-    }
-
-    .badge {
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(15, 118, 110, 0.24);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-      align-items: center;
-    }
-
-    .btn-primary {
-      background: var(--light);
-      color: var(--dark);
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: var(--shadow-soft);
-      border: none;
-      cursor: pointer;
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 40px rgba(15, 118, 110, 0.22);
-    }
-
-    .btn-outline {
-      border-radius: 999px;
-      padding: 9px 16px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      font-size: 0.9rem;
-      background: transparent;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      transition: background 0.15s ease, transform 0.1s ease;
-    }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.16);
-      transform: translateY(-1px);
-    }
-
-    .hero-highlight {
-      font-size: 0.8rem;
-      opacity: 0.9;
-      margin-top: 8px;
-    }
-
-    .hero-card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 18px;
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow-soft);
-      display: grid;
-      gap: 10px;
-    }
-
-    .hero-card h2 {
-      font-size: 1.05rem;
-      margin-bottom: 4px;
-    }
-
-    .hero-card ul {
-      list-style: none;
-      font-size: 0.86rem;
-      color: var(--gray);
-      display: grid;
-      gap: 4px;
-    }
-
-    .hero-card li::before {
-      content: "✓";
-      color: var(--green);
-      font-weight: 700;
-      margin-right: 6px;
-    }
-
-    .hero-contact {
-      font-size: 0.8rem;
-      color: var(--gray);
-      border-top: 1px solid #e5e7eb;
-      padding-top: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 26px auto 40px;
-      padding: 0 20px 20px;
-    }
-
-    section {
-      margin-top: 32px;
-      background: #f9fafb;
-      border-radius: var(--border-radius);
-      padding: 24px 20px;
-      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
-    }
-
-    section.alt {
-      background: var(--green-soft);
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      margin-bottom: 6px;
-    }
-
-    .section-intro {
-      font-size: 0.9rem;
-      color: var(--gray);
-      margin-bottom: 16px;
-    }
-
-    .services-grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .service-card {
-      background: var(--light);
-      border-radius: 14px;
-      padding: 16px 14px 14px;
-      border: 1px solid #e5e7eb;
-      display: grid;
-      gap: 6px;
-    }
-
-    .service-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--green);
-      font-weight: 600;
-    }
-
-    .service-card h3 {
-      font-size: 1rem;
-    }
-
-    .service-card p {
-      font-size: 0.86rem;
-      color: var(--gray);
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
-
-    .tag {
-      font-size: 0.75rem;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: #f3f4f6;
-      color: #4b5563;
-    }
-
-    .steps {
-      display: grid;
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      gap: 10px;
-      align-items: flex-start;
-      font-size: 0.88rem;
-    }
-
-    .step-number {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: var(--green);
-      color: var(--light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 600;
-      box-shadow: 0 4px 10px rgba(16, 185, 129, 0.5);
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 22px;
-      align-items: flex-start;
-    }
-
-    .checklist {
-      list-style: none;
-      font-size: 0.86rem;
-      color: var(--gray);
-      display: grid;
-      gap: 4px;
-    }
-
-    .checklist li::before {
-      content: "•";
-      color: var(--green);
-      font-weight: 700;
-      margin-right: 6px;
-    }
-
-    .contact-box {
-      background: var(--light);
-      border-radius: 14px;
-      padding: 14px 14px 10px;
-      border: 1px solid #e5e7eb;
-      font-size: 0.86rem;
-      display: grid;
-      gap: 6px;
-    }
-
-    .contact-row {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .contact-row span {
-      color: var(--gray);
-      font-size: 0.8rem;
-    }
-
-    .contact-row a {
-      font-weight: 600;
-    }
-
-    footer {
-      padding: 18px 20px 24px;
-      border-top: 1px solid #e5e7eb;
-      font-size: 0.8rem;
-      color: var(--gray);
-      background: #f9fafb;
-    }
-
-    .footer-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        padding-bottom: 30px;
-      }
-
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-card {
-        order: -1;
-      }
-
-      main {
-        margin-top: 18px;
-      }
-
-      section {
-        padding: 18px 16px;
-      }
-
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="logo">
-        <img src="helpu_logo_main.svg" alt="HelpU logo" class="logo-icon">
-        <div>
-          <div>HelpU</div>
-          <small style="font-weight:400;opacity:.85">Hjemmerengjøring i Oslo</small>
-        </div>
-      </div>
-      <nav class="nav-links">
-        <a href="#tjenester">Tjenester</a>
-        <a href="#slik-funker-det">Slik fungerer det</a>
-        <a href="#om-oss">Om oss</a>
-        <a href="#kontakt">Kontakt</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Your Logo</div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </div>
-
-    <div class="hero">
-      <div class="hero-text">
-        <h1>
-          Et <span>rent hjem</span>
-          – uten ekstra stress
-        </h1>
-        <p>
-          HelpU hjelper travle familier på Oslo sør – Nordstrand, Lambertseter og omegn med pålitelige tjenester i hjemmet. Vi legger vekt på kvalitet, forutsigbarhet og god kommunikasjon.
-        </p>
-
-        <div class="hero-badges">
-          <div class="badge">✨ Fast og regelmessig vask</div>
-          <div class="badge">🏠 Spesialisert på private hjem</div>
-        </div>
-
-        <div class="hero-actions">
-          <a href="mailto:kontakt@helpu.no?subject=Foresp%C3%B8rsel%20om%20hjemmerengj%C3%B8ring" class="btn-primary">
-            Bestill uforpliktende tilbud
-            <span>→</span>
-          </a>
-          <a href="tel:+4791710085" class="btn-outline">
-            Ring 91 71 00 85
-          </a>
-        </div>
-
-        <div class="hero-highlight">
-          Svar innen én virkedag. Ingen bindingstid på standardavtaler.
-        </div>
-      </div>
-
-      <aside class="hero-card">
-        <h2>Hva vi kan hjelpe deg med</h2>
-        <ul>
-          <li>Ukentlig eller annenhver uke hjemmerengjøring</li>
-          <li>Periodisk hovedrengjøring av hele boligen</li>
-          <li>Skånsom rengjøring av kjøkken og bad</li>
-          <li>Støvsuging, gulvvask og overflaterengjøring</li>
-        </ul>
-        <div class="hero-contact">
-          <div>
-            <strong>E-post:</strong> <a href="mailto:kontakt@helpu.no">kontakt@helpu.no</a>
-          </div>
-          <div>
-            <strong>Telefon:</strong> <a href="tel:+4791710085">91 71 00 85</a>
-          </div>
-        </div>
-      </aside>
     </div>
   </header>
 
   <main>
-    <section id="tjenester">
-      <h2>Våre tjenester</h2>
-      <p class="section-intro">
-        Vi fokuserer på pålitelige tjenester i hjemmet – enkelt, trygt og forutsigbart. Hovedtjenesten vår er regelmessig rengjøring. I tillegg kan vi
-        hjelpe med litt ekstra ved behov.
-      </p>
-
-      <div class="services-grid">
-        <article class="service-card">
-          <div class="service-label">Hovedtjeneste</div>
-          <h3>Regelmessig hjemmerengjøring</h3>
-          <p>
-            Fast vask en gang i uken, annenhver uke eller månedlig. Vi blir kjent med hjemmet ditt
-            og sørger for at det ser ryddig og innbydende ut – hver gang.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Fast avtale</span>
-            <span class="tag">Samme vasker der det er mulig</span>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <div class="service-label">Ekstra</div>
-          <h3>Hovedrengjøring</h3>
-          <p>
-            En grundigere vask noen ganger i året – for eksempel før jul, etter ferier eller når du
-            bare vil starte med helt blanke ark.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Top to bottom</span>
-            <span class="tag">Skreddersydd</span>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <div class="service-label">Tilleggstjeneste</div>
-          <h3>Flyttevask</h3>
-          <p>
-            Ved kapasitet kan vi hjelpe med flyttevask. Vi går nøye gjennom forventninger og
-            leverer en ren bolig klar for overtakelse.
-          </p>
-          <div class="tag-row">
-            <span class="tag">På forespørsel</span>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <div class="service-label">Tilleggstjeneste</div>
-          <h3>Trappevask</h3>
-          <p>
-            For mindre sameier og gårder. Et naturlig tillegg om vi allerede vasker hos beboerne.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Sameier &amp; gårder</span>
-            <span class="tag">Flexibel avtale</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="slik-funker-det" class="alt">
-      <h2>Slik fungerer det</h2>
-      <p class="section-intro">
-        En enkel prosess – fra første kontakt til en fast og forutsigbar tjenesterytme.
-      </p>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div>
-            <strong>Ta kontakt</strong>
-            <p>Send oss en e-post eller ring, og fortell kort om bolig, ønsket frekvens og hva du trenger hjelp til.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-number">2</div>
-          <div>
-            <strong>Uforpliktende tilbud</strong>
-            <p>Vi gir deg et oversiktlig tilbud med anbefalt løsning, pris og forslag til oppstart.</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-number">3</div>
-          <div>
-            <strong>Oppstart og tilpasning</strong>
-            <p>De første gangene justerer vi sammen, slik at vasken blir akkurat slik du liker den.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="om-oss">
-      <div class="two-col">
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
         <div>
-          <h2>Om HelpU</h2>
-          <p class="section-intro">
-            HelpU er et lite og personlig tjenestefirma som brenner for enkle, stabile avtaler og
-            god dialog med kundene.
+          <h1>Headline that clearly says what you offer</h1>
+          <p>
+            One or two sentences explaining who you help and how you help them.
           </p>
-          <ul class="checklist">
-            <li>Fokus på hjemmerengjøring i Oslo – særlig Nordstrand og Lambertseter</li>
-            <li>Erfaring fra koordinering og drift av profesjonell trappevask</li>
-            <li>Forutsigbare avtaler og ryddig kommunikasjon</li>
-          </ul>
+          <a href="#contact" class="btn-primary">Get in touch</a>
         </div>
-
-        <aside class="contact-box">
-          <strong>Praktisk info</strong>
-          <div class="contact-row">
-            <span>Telefon</span>
-            <a href="tel:+4791710085">91 71 00 85</a>
-          </div>
-          <div class="contact-row">
-            <span>E-post</span>
-            <a href="mailto:kontakt@helpu.no">kontakt@helpu.no</a>
-          </div>
-          <div class="contact-row">
-            <span>Organisasjonsnummer</span>
-            <div>935 501 776</div>
-          </div>
-        </aside>
       </div>
     </section>
 
-    <section id="kontakt" class="alt">
-      <h2>Be om et uforpliktende tilbud</h2>
-      <p class="section-intro">
-        Fortell kort om hjemmet ditt (størrelse, område, hvor ofte du ønsker vask), så svarer vi
-        med forslag til løsning og pris.
-      </p>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Service One</h3>
+            <p>Short description of this service and who it’s for.</p>
+          </article>
+          <article class="card">
+            <h3>Service Two</h3>
+            <p>Short description of this service and who it’s for.</p>
+          </article>
+          <article class="card">
+            <h3>Service Three</h3>
+            <p>Short description of this service and who it’s for.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <div class="two-col">
-        <div>
-          <p style="font-size:0.9rem;margin-bottom:10px;">
-            Send oss gjerne en e-post med noen stikkord:
-          </p>
-          <ul class="checklist">
-            <li>Adresse/bydel</li>
-            <li>Ca. størrelse på bolig (m²)</li>
-            <li>Hvor ofte du ønsker vask</li>
-            <li>Om det er noe vi bør ta ekstra hensyn til</li>
-          </ul>
-        </div>
-        <div class="contact-box">
-          <div class="contact-row">
-            <span>E-post</span>
-            <a href="mailto:kontakt@helpu.no?subject=Foresp%C3%B8rsel%20om%20hjemmerengj%C3%B8ring">kontakt@helpu.no</a>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          A short story about your business, your background, and why people should trust you.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <form class="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
           </div>
-          <div class="contact-row">
-            <span>Telefon</span>
-            <a href="tel:+4791710085">91 71 00 85</a>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
           </div>
-          <p style="font-size:0.8rem;color:var(--gray);margin-top:4px;">
-            Foretrekker du telefon? Ring oss – hvis vi er ute og vasker, ringer vi deg tilbake.
-          </p>
-        </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div>© 2025 HelpU – hjemmerengjøring i Oslo</div>
-      <div>Org.nr. 935 501 776</div>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Your Business Name. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-
