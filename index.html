@@ -14,9 +14,9 @@
       <div class="logo"><img class="logo-mark" src="assets/img/helpu_logo_main.svg" alt="Helpu Logo" /></div>
       <nav class="nav">
         <a href="#home">Home</a>
-        <a href="#services">Services</a>
+        <a href="#tjenester">Tjenester</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Kontakt</a>
       </nav>
     </div>
   </header>
@@ -37,9 +37,9 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="section">
+    <section id="tjenester" class="section">
       <div class="container">
-        <h2>Services</h2>
+        <h2>Tjenester</h2>
         <div class="grid-3">
           <article class="card">
             <h3>Service One</h3>
@@ -75,8 +75,10 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="section">
       <div class="container">
-        <h2>Contact</h2>
-        <form class="contact-form" name="contact" method="POST" netlify>
+        <h2>Kontakt</h2>
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/success">
+          <!-- Required hidden input for Netlify to identify the form -->
+          <input type="hidden" name="form-name" value="contact" />
           <div class="form-row">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" required />
