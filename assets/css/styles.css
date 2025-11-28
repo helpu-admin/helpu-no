@@ -103,16 +103,30 @@ body {
 
 /* Hero */
 .hero {
-  background: radial-gradient(circle at top left, #6ee7b7, var(--brand-teal-dark));
+  background: url('../../assets/img/hero.png') center/cover no-repeat;
   color: #ffffff;
   padding: 4.5rem 0;
   scroll-margin-top: 80px;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 118, 110, 0.4);
+  z-index: 0;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {

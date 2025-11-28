@@ -15,7 +15,7 @@
       <nav class="nav">
         <a href="#home">Home</a>
         <a href="#tjenester">Tjenester</a>
-        <a href="#about">About</a>
+        <a href="#about">Om HelpU</a>
         <a href="#contact">Kontakt</a>
       </nav>
     </div>
@@ -42,12 +42,21 @@
         <h2>Tjenester</h2>
         <div class="grid-3">
           <article class="card">
-            <h3>Service One</h3>
-            <p>Short description of this service and who it’s for.</p>
+            <h3>Regelmessig hjemmerengjøring</h3>
+            <p>Fast vask en gang i uken, annenhver uke eller månedlig.<br>
+            Vi blir kjent med hjemmet ditt og sørger for at det ser ryddig og innbydende ut – hver gang.</p>
+            <ul style="margin:0.7em 0 0 0; font-size:0.95em; color:var(--brand-teal-dark); padding-left:1.2em;">
+              <li>Fast avtale</li>
+              <li>Samme vasker der det er mulig</li>
+            </ul>
           </article>
           <article class="card">
-            <h3>Service Two</h3>
-            <p>Short description of this service and who it’s for.</p>
+            <h3>Hovedrengjøring</h3>
+            <p>En grundigere vask noen ganger i året – før jul, etter ferier, eller når du vil starte med blanke ark.</p>
+            <ul style="margin:0.7em 0 0 0; font-size:0.95em; color:var(--brand-teal-dark); padding-left:1.2em;">
+              <li>Top-to-bottom</li>
+              <li>Skreddersydd</li>
+            </ul>
           </article>
           <article class="card">
             <h3>Service Three</h3>
@@ -75,7 +84,14 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="section">
       <div class="container">
-        <h2>Kontakt</h2>
+        <h2>Be om et uforpliktende tilbud</h2>
+        <p style="margin:0.7rem 0 1.2rem 0; font-size:1.05rem; color:var(--text-main);">Fortell kort om hjemmet ditt (størrelse, område, hvor ofte du ønsker vask), så svarer vi med forslag til løsning og pris.</p>
+        <ul style="margin-bottom:1.5rem; font-size:1rem; color:var(--text-muted); padding-left:1.2em;">
+          <li>Adresse/bydel</li>
+          <li>Ca. størrelse på bolig (m²)</li>
+          <li>Hvor ofte du ønsker vask</li>
+          <li>Eventuelle hensyn vi bør ta</li>
+        </ul>
         <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/success">
           <!-- Required hidden input for Netlify to identify the form -->
           <input type="hidden" name="form-name" value="contact" />
@@ -92,6 +108,10 @@
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
           <button type="submit" class="btn-primary">Send</button>
+                  <div style="margin-top:1.2rem; font-size:1.05rem; text-align:center; color:var(--text-main);">
+                    E-post: <a href="mailto:kontakt@helpu.no" style="color:var(--brand-teal); text-decoration:none; font-weight:600;">kontakt@helpu.no</a><br>
+                    Telefon: <a href="tel:91710085" style="color:var(--brand-teal); text-decoration:none; font-weight:600;">91 71 00 85</a>
+                  </div>
         </form>
       </div>
     </section>
@@ -99,7 +119,8 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Your Business Name. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> HelpU – hjemmetjenester i Oslo<br>
+Org.nr. 935 501 776</p>
     </div>
   </footer>
 
