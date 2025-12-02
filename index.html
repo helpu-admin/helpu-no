@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Short description of what your business does." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -31,7 +34,10 @@
             HelpU hjelper travle familier med pålitelige tjenester i hjemmet. Vi legger vekt på kvalitet, forutsigbarhet og god kommunikasjon.<br> <br>✨ Fast og regelmessig service
 <br>🏠 Spesialisert på private hjem
           </p>
-          <a href="#contact" class="btn-primary">Bestill uforpliktende tilbud</a>
+          <a href="#contact" class="btn-primary">
+            <img src="assets/img/helpu-shield-negative.svg" alt="" style="width:26px; height:26px; margin-right:0.3em; vertical-align:middle;">
+            Bestill uforpliktende tilbud
+          </a>
         </div>
       </div>
     </section>
@@ -59,8 +65,12 @@
             </ul>
           </article>
           <article class="card">
-            <h3>Service Three</h3>
-            <p>Short description of this service and who it’s for.</p>
+            <h3>Flyttevask</h3>
+            <p>Ved kapasitet kan vi hjelpe med flyttevask.<br>
+            Vi går nøye gjennom forventninger og leverer en ren bolig klar for overtakelse.</p>
+            <ul style="margin:0.7em 0 0 0; font-size:0.95em; color:var(--brand-teal-dark); padding-left:1.2em;">
+              <li>På forespørsel</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -82,7 +92,7 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
+    <section id="contact" class="section section-contact">
       <div class="container">
         <h2>Be om et uforpliktende tilbud</h2>
         <p style="margin:0.7rem 0 1.2rem 0; font-size:1.05rem; color:var(--text-main);">Fortell kort om hjemmet ditt (størrelse, område, hvor ofte du ønsker vask), så svarer vi med forslag til løsning og pris.</p>
@@ -96,15 +106,15 @@
           <!-- Required hidden input for Netlify to identify the form -->
           <input type="hidden" name="form-name" value="contact" />
           <div class="form-row">
-            <label for="name">Name</label>
+            <label for="name">Navn</label>
             <input id="name" name="name" type="text" required />
           </div>
           <div class="form-row">
-            <label for="email">Email</label>
+            <label for="email">E-post</label>
             <input id="email" name="email" type="email" required />
           </div>
           <div class="form-row">
-            <label for="message">Message</label>
+            <label for="message">Melding</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
           <button type="submit" class="btn-primary">Send</button>
