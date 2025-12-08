@@ -119,7 +119,7 @@
         <div class="giftcard-grid">
           <div class="giftcard-card">
             <h3>Bestill gavekort</h3>
-            <form name="gavekort" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/success.html">
+            <form name="gavekort" method="POST" data-netlify="true" action="/success">
               <input type="hidden" name="form-name" value="gavekort" />
               <div class="form-row">
                 <label for="gk-hours">Velg antall timer</label>
@@ -148,7 +148,6 @@
                 <label for="gk-message">Melding til gavekortet (valgfritt)</label>
                 <textarea id="gk-message" name="message" rows="3"></textarea>
               </div>
-              <div data-netlify-recaptcha="true"></div>
               <button type="submit" class="btn btn-primary">Bestill gavekort</button>
             </form>
           </div>
@@ -216,7 +215,7 @@
           <li>Hvor ofte du ønsker vask</li>
           <li>Eventuelle hensyn vi bør ta</li>
         </ul>
-        <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/success">
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/success">
           <!-- Required hidden input for Netlify to identify the form -->
           <input type="hidden" name="form-name" value="contact" />
           <div class="form-row">
@@ -231,7 +230,6 @@
             <label for="message">Melding</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
-          <div data-netlify-recaptcha="true"></div>
           <button type="submit" class="btn-primary">Send</button>
                   <div style="margin-top:1.2rem; font-size:1.05rem; text-align:center; color:var(--text-main);">
                     E-post: <a href="mailto:kontakt@helpu.no" style="color:var(--brand-teal); text-decoration:none; font-weight:600;">kontakt@helpu.no</a><br>
