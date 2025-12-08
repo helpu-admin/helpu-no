@@ -122,8 +122,8 @@
             <form name="gavekort" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/success">
               <input type="hidden" name="form-name" value="gavekort">
               
-              <label for="hours">Velg antall timer</label>
-              <select id="hours" name="hours" required>
+              <label for="gk-hours">Velg antall timer</label>
+              <select id="gk-hours" name="hours" required>
                 <option value="">Velg...</option>
                 <option value="1 time - kr 599,-">1 time - kr 599,-</option>
                 <option value="2 timer - kr 1.098,-">2 timer - kr 1.098,-</option>
@@ -132,17 +132,17 @@
                 <option value="20 timer - kr 8.980,-">20 timer - kr 8.980,-</option>
               </select>
 
-              <label for="name">Ditt navn</label>
-              <input type="text" id="name" name="name" required>
+              <label for="gk-name">Ditt navn</label>
+              <input type="text" id="gk-name" name="name" required>
 
-              <label for="email">E-post</label>
-              <input type="email" id="email" name="email" required>
+              <label for="gk-email">E-post</label>
+              <input type="email" id="gk-email" name="email" required>
 
-              <label for="phone">Telefon</label>
-              <input type="tel" id="phone" name="phone" required>
+              <label for="gk-phone">Telefon</label>
+              <input type="tel" id="gk-phone" name="phone" required>
 
-              <label for="message">Melding til gavekortet (valgfritt)</label>
-              <textarea id="message" name="message" rows="3"></textarea>
+              <label for="gk-message">Melding til gavekortet (valgfritt)</label>
+              <textarea id="gk-message" name="message" rows="3"></textarea>
 
               <div data-netlify-recaptcha="true"></div>
 
