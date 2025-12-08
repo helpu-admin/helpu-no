@@ -489,6 +489,10 @@ select:focus {
   width: 100%;
 }
 
+.giftcard-card form > div[data-netlify-recaptcha] {
+  margin-top: 1.5rem;
+}
+
 .giftcard-card form button {
   margin-top: 1.5rem;
   width: 100%;
