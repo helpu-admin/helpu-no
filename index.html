@@ -18,6 +18,7 @@
       <nav class="nav">
         <a href="#home">Home</a>
         <a href="#tjenester">Tjenester</a>
+        <a href="#gavekort">Gavekort</a>
         <a href="#about">Om HelpU</a>
         <a href="#contact">Kontakt</a>
       </nav>
@@ -38,6 +39,9 @@
             <img src="assets/img/helpu-shield-negative.svg" alt="" style="width:26px; height:26px; margin-right:0.3em; vertical-align:middle;">
             Bestill uforpliktende tilbud
           </a>
+          <a href="#gavekort" class="hero-giftcard-badge">
+            🎁 Gavekort  
+          </a>
         </div>
       </div>
     </section>
@@ -53,7 +57,7 @@
             Vi blir kjent med hjemmet ditt og sørger for at det ser ryddig og innbydende ut – hver gang.</p>
             <ul style="margin:0.7em 0 0 0; font-size:0.95em; color:var(--brand-teal-dark); padding-left:1.2em;">
               <li>Fast avtale</li>
-              <li>Samme vasker der det er mulig</li>
+              <li>Samme renholder der det er mulig</li>
             </ul>
           </article>
           <article class="card">
@@ -73,6 +77,113 @@
             </ul>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- GAVEKORT SECTION -->
+    <section id="gavekort" class="section">
+      <div class="container">
+        <h2>Gi frihet. Gi ro. Gi et rent hjem.</h2>
+        <p class="section-subheading">Fordi tid er den beste gaven.</p>
+        <p>
+          Kjenner du noen som vil få glede av å starte det nye året med et rent hjem? HelpU tilbyr profesjonelle tjenester i hjemmet, med rengjøring som kjerne. Vi setter service og pålitelighet i fokus, med lokal forankring på Bekkelaget.
+        </p>
+        <br>
+        <p>
+          Gavekortet er helt fleksibelt. Mottakeren avtaler selv når de ønsker rengjøring. De kan benytte hele gavekortet på én gang, eller dele det opp over flere besøk. Det er gyldig fra og med januar, og ett år frem i tid.
+        </p>
+
+        <div class="giftcard-process">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Du velger antall timer</h3>
+            <p>1, 2, 5, 10 eller 20 timer. Ingen binding.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Mottakeren bestemmer tidspunkt</h3>
+            <p>Rengjøring avtales direkte og kan deles opp over flere besøk.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Gyldig i ett år</h3>
+            <p>Kan brukes fra januar og ett år frem i tid.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Enkelt å betale og gi bort</h3>
+            <p>Du mottar faktura på e-post (Vipps mulig), deretter et digitalt gavekort.</p>
+          </div>
+        </div>
+
+        <div class="giftcard-grid">
+          <div class="giftcard-card">
+            <h3>Bestill gavekort</h3>
+            <form name="gavekort" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/success">
+              <input type="hidden" name="form-name" value="gavekort">
+              
+              <label for="hours">Velg antall timer</label>
+              <select id="hours" name="hours" required>
+                <option value="">Velg...</option>
+                <option value="1 time - kr 599,-">1 time - kr 599,-</option>
+                <option value="2 timer - kr 1.098,-">2 timer - kr 1.098,-</option>
+                <option value="5 timer - kr 2.495,-">5 timer - kr 2.495,-</option>
+                <option value="10 timer - kr 4.690,-">10 timer - kr 4.690,-</option>
+                <option value="20 timer - kr 8.980,-">20 timer - kr 8.980,-</option>
+              </select>
+
+              <label for="name">Ditt navn</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="email">E-post</label>
+              <input type="email" id="email" name="email" required>
+
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" required>
+
+              <label for="message">Melding til gavekortet (valgfritt)</label>
+              <textarea id="message" name="message" rows="3"></textarea>
+
+              <div data-netlify-recaptcha="true"></div>
+
+              <button type="submit" class="btn btn-primary">Bestill gavekort</button>
+            </form>
+          </div>
+
+          <div class="giftcard-card">
+            <h3>Priser</h3>
+            <table class="price-table">
+              <tbody>
+                <tr>
+                  <td>1 time</td>
+                  <td>kr 599,-</td>
+                </tr>
+                <tr>
+                  <td>2 timer</td>
+                  <td>kr 1.098,-<br><span class="price-detail">(549,-/time)</span></td>
+                </tr>
+                <tr>
+                  <td>5 timer</td>
+                  <td>kr 2.495,-<br><span class="price-detail">(499,-/time)</span></td>
+                </tr>
+                <tr>
+                  <td>10 timer</td>
+                  <td>kr 4.690,-<br><span class="price-detail">(469,-/time)</span></td>
+                </tr>
+                <tr>
+                  <td>20 timer</td>
+                  <td>kr 8.980,-<br><span class="price-detail">(449,-/time)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="giftcard-contact">
+          <strong>Spørsmål?</strong><br>
+          kontakt@helpu.no<br>
+          91 71 00 85
+        </p>
       </div>
     </section>
 
@@ -130,7 +241,7 @@
   <footer class="site-footer">
     <div class="container">
       <p>&copy; <span id="year"></span> HelpU – hjemmetjenester i Oslo<br>
-Org.nr. 935 501 776</p>
+levert av Lorentzen Service, org.nr. 935 501 776</p>
     </div>
   </footer>
 

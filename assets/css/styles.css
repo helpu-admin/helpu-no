@@ -39,6 +39,15 @@ body {
   transform: translateY(0);
 }
 
+.section-subheading {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
 /* Layout helpers */
 .container {
   width: min(1100px, 100% - 2rem);
@@ -179,6 +188,32 @@ body {
   gap: 1.5rem;
   position: relative;
   z-index: 1;
+}
+
+.hero-content > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-giftcard-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 1rem 1.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 0.75rem;
+  max-width: fit-content;
+}
+
+.hero-giftcard-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(251, 191, 36, 0.5);
 }
 
 .hero h1 {
@@ -343,7 +378,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   padding: 0.6rem 0.8rem;
   border-radius: 0.5rem;
   border: 1px solid var(--accent);
@@ -352,9 +388,155 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: 2px solid rgba(22, 160, 133, 0.5);
   border-color: var(--brand-teal);
+}
+
+/* Gift Card Process */
+.giftcard-process {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.process-step {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(243, 237, 229, 0.5) 100%);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-4px);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--brand-teal);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.process-step h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.process-step p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Gift Card Grid */
+.giftcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.giftcard-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.giftcard-card:first-child {
+  background: var(--accent);
+}
+
+.giftcard-card:last-child {
+  background: linear-gradient(135deg, var(--brand-teal-soft) 0%, rgba(231, 247, 240, 0.6) 100%);
+}
+
+.giftcard-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.giftcard-card form label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-main);
+  display: block;
+  margin-top: 1rem;
+}
+
+.giftcard-card form label:first-of-type {
+  margin-top: 0;
+}
+
+.giftcard-card form input,
+.giftcard-card form select,
+.giftcard-card form textarea {
+  width: 100%;
+}
+
+.giftcard-card form button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.price-table td {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.price-table td:first-child {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.price-table td:last-child {
+  text-align: right;
+  color: var(--brand-teal);
+  font-weight: 600;
+}
+
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+
+.price-detail {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.giftcard-contact {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-top: 2rem;
+}
+
+.giftcard-contact strong {
+  color: var(--text-main);
+  font-size: 1.2rem;
 }
 
 /* Footer */
