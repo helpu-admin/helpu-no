@@ -561,6 +561,11 @@ select:focus {
     gap: 0.4rem;
   }
 
+  .nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
   .hero {
     padding: 3.5rem 0;
   }
